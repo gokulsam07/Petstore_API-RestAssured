@@ -1,7 +1,10 @@
 package petstore.utilities;
 
 
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -65,6 +68,13 @@ public class Reports implements ITestListener
 	public void onFinish(ITestContext testContext)
 	{
 		extent.flush();
+		File open = new File("F:\\Petstore_API-RestAssured\\petstore\\report1.html");
+		try {
+			Desktop.getDesktop().browse(open.toURI());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
