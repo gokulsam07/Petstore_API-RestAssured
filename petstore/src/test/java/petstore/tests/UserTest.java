@@ -20,8 +20,6 @@ UserPOJO payload;
 		payload.setEmail("gokuls2381@gmail.com");
 		payload.setPassword("qwerty@123");
 		payload.setPhone("9876543210");	
-		
-
 	}
 	
 	
