@@ -8,5 +8,5 @@ public class Routes {
 	public static String createUser = baseURI+"/user";
 	public static String getUser = baseURI+"/user/{username}";
 	public static String updateUser = baseURI+"/user/{username}";
-	public static String deleteUser = baseURI+"/{username}";
+	public static String deleteUser = baseURI+"/user/{username}";
 }

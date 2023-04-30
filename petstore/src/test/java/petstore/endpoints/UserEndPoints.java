@@ -9,7 +9,6 @@ import petstore.payloads.UserPOJO;
 public class UserEndPoints {
 
 	public static Response createUser(UserPOJO payload){
-	System.out.println(payload);
 		Response response = 	given()
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -20,7 +19,6 @@ public class UserEndPoints {
 	}
 
 	public static Response getUser(String userName){
-		System.out.println(userName);
 		Response response = 	given()
 				.pathParam("username", userName)
 				.when()
@@ -39,7 +37,7 @@ public class UserEndPoints {
 		return response;
 	}
 	
-	public static Response deleteUSer(String userName){
+	public static Response deleteUser(String userName){
 		Response response = 	given()
 				.pathParam("username", userName)
 				.when()
