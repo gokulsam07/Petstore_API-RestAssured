@@ -9,6 +9,7 @@ import petstore.payloads.UserPOJO;
 public class UserEndPoints {
 
 	public static Response createUser(UserPOJO payload){
+	System.out.println(payload);
 		Response response = 	given()
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -19,14 +20,15 @@ public class UserEndPoints {
 	}
 
 	public static Response getUser(String userName){
+		System.out.println(userName);
 		Response response = 	given()
 				.pathParam("username", userName)
 				.when()
-				.post(Routes.getUser);
+				.get(Routes.getUser);
 		return response;
 	}
 
-	public static Response ipdateUser(UserPOJO payload, String userName){
+	public static Response updateUser(UserPOJO payload, String userName){
 		Response response = 	given()
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
