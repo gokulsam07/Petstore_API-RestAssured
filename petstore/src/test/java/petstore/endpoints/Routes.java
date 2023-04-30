@@ -1,0 +1,12 @@
+package petstore.endpoints;
+
+public class Routes {
+	public static String baseURI = "https://petstore.swagger.io/#";
+
+	//User Module Routes
+
+	public static String createUser = baseURI+"/user/createUser";
+	public static String getUser = baseURI+"/user/{username}";
+	public static String updateUser = baseURI+"/user/{username}";
+	public static String deleteUser = baseURI+"/user/{username}";
+}
